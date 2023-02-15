@@ -17,3 +17,7 @@ Spock Vs. Lizard game.
 |     Jesús Pérez Sánchez     |     [DiosYisus77](https://github.com/DiosYisus77)     |
 |     Mario Recio Montero     |     [Mario-Recio](https://github.com/Mario-Recio)     |
 |    Sergio Perez Sampedro    |         [lord-47](https://github.com/lord-47)         |
+
+## ⚙️ UML
+
+![previous-uml](https://user-images.githubusercontent.com/61398114/219008590-9c1e378a-d3ea-420e-a0bc-33a3dbe54bcc.svg)
