@@ -57,6 +57,7 @@ public class jugsdorvsJugador extends AppCompatActivity {
 
     @SuppressLint({"SetTextI18n", "NonConstantResourceId"})
     public void cambiaimagen(View view) throws NoSuchAlgorithmException {
+        //cognitive now lower
         TextView textoResultado = findViewById(R.id.Resultado);
         Juego j = new Juego();
         Juego result = new Juego();
