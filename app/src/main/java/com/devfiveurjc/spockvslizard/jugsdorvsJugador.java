@@ -125,7 +125,6 @@ public class jugsdorvsJugador extends AppCompatActivity {
             } else {
                 mp = MediaPlayer.create(this, sonido);
                 mp.start();
-                Datojugador.setImageResource(devolver(Jugador));
                 Datojugador2.setImageResource(jugador2Image);
                 sol = result.resultado(Jugador, Jugador2);
                 if (sol == 0) {
@@ -137,7 +136,7 @@ public class jugsdorvsJugador extends AppCompatActivity {
                 }
             }
         } else {
-            textoResultado.setText("¡Tienes eu limpiar tablero!");
+            textoResultado.setText("¡Tienes que limpiar tablero!");
         }
         turno++;
     }
