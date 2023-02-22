@@ -1,14 +1,23 @@
 package com.devfiveurjc.spockvslizard;
 
+import android.os.Build;
+
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.util.Random;
+
 
 public class Juego {
 
     private int[][] tablero;
+    private Random rand = SecureRandom.getInstanceStrong();
+
+    public Juego() throws NoSuchAlgorithmException {
+    }
 
     public int eleccionMaquina(){ //0:Piedra; 1:Papel; 2:Tijera; 3:Lagarto; 4:Spock
-        Random random = new Random();
-        return random.nextInt(5);
+        Random random = null;
+        return this.rand.nextInt();
     }
 
     private void inicializarTablero() {
