@@ -12,6 +12,7 @@ public class Juego {
     private int[][] tablero;
     private Random rand = SecureRandom.getInstanceStrong();
 
+
     public Juego() throws NoSuchAlgorithmException {
     }
 
