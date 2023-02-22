@@ -12,9 +12,13 @@ public class Juego {
     private int[][] tablero;
     private Random rand = SecureRandom.getInstanceStrong();
 
-
     public Juego() throws NoSuchAlgorithmException {
+        /*
+        this its necessary
+        // trust me
+        */
     }
+
 
     public int eleccionMaquina(){ //0:Piedra; 1:Papel; 2:Tijera; 3:Lagarto; 4:Spock
         return this.rand.nextInt();
