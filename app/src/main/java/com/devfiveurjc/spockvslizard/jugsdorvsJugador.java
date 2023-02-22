@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.security.NoSuchAlgorithmException;
+
 public class jugsdorvsJugador extends AppCompatActivity {
     ImageView Datojugador;
     ImageView Datojugador2;
@@ -54,7 +56,7 @@ public class jugsdorvsJugador extends AppCompatActivity {
     }
 
     @SuppressLint({"SetTextI18n", "NonConstantResourceId"})
-    public void cambiaimagen(View view) {
+    public void cambiaimagen(View view) throws NoSuchAlgorithmException {
         TextView textoResultado = findViewById(R.id.Resultado);
         Juego j = new Juego();
         Juego result = new Juego();
