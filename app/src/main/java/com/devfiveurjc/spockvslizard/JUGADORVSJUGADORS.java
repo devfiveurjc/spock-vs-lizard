@@ -39,12 +39,10 @@ public class JUGADORVSJUGADORS extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-
     @SuppressLint({"SetTextI18n", "NonConstantResourceId"})
     public void cambiaimagen(View view) throws NoSuchAlgorithmException {
         //cognitive now lower
         TextView textoResultado = findViewById(R.id.Resultado);
-        Juego j = new Juego();
         Juego result = new Juego();
         int sol;
         if (turno <= 1) {
@@ -125,7 +123,6 @@ public class JUGADORVSJUGADORS extends AppCompatActivity {
             textoResultado.setText("¡Tienes que limpiar tablero!");
         }
         turno++;
-
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
