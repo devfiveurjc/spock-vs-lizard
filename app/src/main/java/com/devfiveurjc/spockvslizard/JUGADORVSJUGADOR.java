@@ -14,10 +14,11 @@ import android.widget.Toast;
 
 import java.security.NoSuchAlgorithmException;
 
-public class jugsdorvsJugador extends AppCompatActivity {
-    ImageView Datojugador;
-    ImageView Datojugador2;
-    int Jugador,Jugador2;
+public class JUGADORVSJUGADOR extends AppCompatActivity {
+    ImageView datojugador;
+    ImageView datojugador2;
+    int jugador;
+    int jugador2;
     int turno;
     MediaPlayer mp;
 
@@ -29,11 +30,11 @@ public class jugsdorvsJugador extends AppCompatActivity {
         Toast.makeText(this,valor, Toast.LENGTH_LONG).show();
         TextView texto = findViewById(R.id.Nombre);
         texto.setText(valor);
-        Datojugador = findViewById(R.id.Datojugador);
-        Datojugador2 = findViewById(R.id.Datomaquina);
+        datojugador = findViewById(R.id.Datojugador);
+        datojugador2 = findViewById(R.id.Datomaquina);
         turno =0;
-        Jugador=0;
-        Jugador2=0;
+        jugador =0;
+        jugador2 =0;
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
@@ -59,7 +60,6 @@ public class jugsdorvsJugador extends AppCompatActivity {
     public void cambiaimagen(View view) throws NoSuchAlgorithmException {
         //cognitive now lower
         TextView textoResultado = findViewById(R.id.Resultado);
-        Juego j = new Juego();
         Juego result = new Juego();
         int sol;
         if (turno <= 1) {
@@ -71,63 +71,63 @@ public class jugsdorvsJugador extends AppCompatActivity {
                     jugadorImage = R.drawable.piedra;
                     sonido = R.raw.rocas;
                     if (turno == 0) {
-                        Jugador = 0;
+                        jugador = 0;
                     } else {
                         jugador2Image = R.drawable.piedra;
-                        Jugador2 = 0;
+                        jugador2 = 0;
                     }
                     break;
                 case R.id.papel:
                     jugadorImage = R.drawable.papel;
                     sonido = R.raw.papel;
                     if (turno == 0) {
-                        Jugador = 1;
+                        jugador = 1;
                     } else {
                         jugador2Image = R.drawable.papel;
-                        Jugador2 = 1;
+                        jugador2 = 1;
                     }
                     break;
                 case R.id.tijera:
                     jugadorImage = R.drawable.tijera;
                     sonido = R.raw.tijeras;
                     if (turno == 0) {
-                        Jugador = 2;
+                        jugador = 2;
                     } else {
                         jugador2Image = R.drawable.tijera;
-                        Jugador2 = 2;
+                        jugador2 = 2;
                     }
                     break;
                 case R.id.lagarto:
                     jugadorImage = R.drawable.lagarto;
                     sonido = R.raw.lagartp;
                     if (turno == 0) {
-                        Jugador = 3;
+                        jugador = 3;
                     } else {
                         jugador2Image = R.drawable.lagarto;
-                        Jugador2 = 3;
+                        jugador2 = 3;
                     }
                     break;
                 case R.id.spok:
                     jugadorImage = R.drawable.spock;
                     sonido = R.raw.spok;
                     if (turno == 0) {
-                        Jugador = 4;
+                        jugador = 4;
                     } else {
                         jugador2Image = R.drawable.spock;
-                        Jugador2 = 4;
+                        jugador2 = 4;
                     }
                     break;
             }
             if (turno == 0) {
                 mp = MediaPlayer.create(this, sonido);
                 mp.start();
-                Datojugador.setImageResource(jugadorImage);
+                datojugador.setImageResource(jugadorImage);
                 textoResultado.setText("Turno del Jugador 2");
             } else {
                 mp = MediaPlayer.create(this, sonido);
                 mp.start();
-                Datojugador2.setImageResource(jugador2Image);
-                sol = result.resultado(Jugador, Jugador2);
+                datojugador2.setImageResource(jugador2Image);
+                sol = result.resultado(jugador, jugador2);
                 if (sol == 0) {
                     textoResultado.setText("EMPATE");
                 } else if (sol == 1) {
@@ -140,13 +140,13 @@ public class jugsdorvsJugador extends AppCompatActivity {
             textoResultado.setText("¡Tienes que limpiar tablero!");
         }
         turno++;
+
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case android.R.id.home:
-                finish();
-                return true;
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
