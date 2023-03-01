@@ -56,105 +56,87 @@ public class JUGADORVSJUGADOR extends AppCompatActivity {
 
     @SuppressLint({"SetTextI18n", "NonConstantResourceId"})
     public void cambiaimagen(View view) {
+        //cognitive now lower
         TextView textoResultado = findViewById(R.id.Resultado);
+        Juego j = new Juego();
         Juego result = new Juego();
         int sol;
-        if (turno <=1) {
-            System.out.println(view.getId());
+        if (turno <= 1) {
+            int jugadorImage = -1;
+            int jugador2Image = -1;
+            int sonido = -1;
             switch (view.getId()) {
                 case R.id.piedra:
-                    if (turno ==0) {
-                        mp = MediaPlayer.create(this, R.raw.rocas);
-                        mp.start();
+                    jugadorImage = R.drawable.piedra;
+                    sonido = R.raw.rocas;
+                    if (turno == 0) {
                         jugador = 0;
-                        break;
-                    }
-                    else{
-                        mp = MediaPlayer.create(this, R.raw.rocas);
-
-                        datojugador.setImageResource(devolver(jugador));
-                        datojugador2.setImageResource(R.drawable.piedra);
-                        mp.start();
+                    } else {
+                        jugador2Image = R.drawable.piedra;
                         jugador2 = 0;
-                        break;
                     }
+                    break;
                 case R.id.papel:
-                    if (turno ==0) {
-                        mp = MediaPlayer.create(this, R.raw.papel);
-                        mp.start();
+                    jugadorImage = R.drawable.papel;
+                    sonido = R.raw.papel;
+                    if (turno == 0) {
                         jugador = 1;
-                        break;
-                    }
-                    else{
-                        mp = MediaPlayer.create(this, R.raw.papel);
-                        datojugador.setImageResource(devolver(jugador));
-                        datojugador2.setImageResource(R.drawable.papel);
-                        mp.start();
+                    } else {
+                        jugador2Image = R.drawable.papel;
                         jugador2 = 1;
-                        break;
                     }
+                    break;
                 case R.id.tijera:
-                    if(turno ==0) {
-                        mp = MediaPlayer.create(this, R.raw.tijeras);
-                        mp.start();
+                    jugadorImage = R.drawable.tijera;
+                    sonido = R.raw.tijeras;
+                    if (turno == 0) {
                         jugador = 2;
-                        break;
-                    }
-                    else {
-                        mp = MediaPlayer.create(this, R.raw.tijeras);
-                        datojugador.setImageResource(devolver(jugador));
-                        datojugador2.setImageResource(R.drawable.tijera);
-                        mp.start();
+                    } else {
+                        jugador2Image = R.drawable.tijera;
                         jugador2 = 2;
-                        break;
                     }
+                    break;
                 case R.id.lagarto:
-                    if(turno ==0) {
-                        mp = MediaPlayer.create(this, R.raw.lagartp);
-                        mp.start();
+                    jugadorImage = R.drawable.lagarto;
+                    sonido = R.raw.lagartp;
+                    if (turno == 0) {
                         jugador = 3;
-                        break;
-                    }
-                    else{
-                        mp = MediaPlayer.create(this, R.raw.lagartp);
-                        datojugador.setImageResource(devolver(jugador));
-                        datojugador2.setImageResource(R.drawable.lagarto);
-                        mp.start();
+                    } else {
+                        jugador2Image = R.drawable.lagarto;
                         jugador2 = 3;
-                        break;
                     }
+                    break;
                 case R.id.spok:
-                    if (turno ==0) {
-                        mp = MediaPlayer.create(this, R.raw.spok);
-                        mp.start();
+                    jugadorImage = R.drawable.spock;
+                    sonido = R.raw.spok;
+                    if (turno == 0) {
                         jugador = 4;
-                        break;
-                    }
-                    else{
-                        mp = MediaPlayer.create(this, R.raw.spok);
-                        datojugador.setImageResource(devolver(jugador));
-                        datojugador2.setImageResource(R.drawable.spock);
-                        mp.start();
+                    } else {
+                        jugador2Image = R.drawable.spock;
                         jugador2 = 4;
-                        break;
                     }
+                    break;
             }
-        }
-        if (turno == 0){
-            textoResultado.setText("Turno del Jugador 2");
-        }
-        else if (turno == 1){
-            sol = result.resultado(jugador, jugador2);
-            if (sol == 0){
-                textoResultado.setText("EMPATE");
-            } else if (sol == 1){
-                textoResultado.setText("JUGADOR 2 GANA");
-            }else if (sol == -1){
-                textoResultado.setText("JUGADOR 1 GANA");
+            if (turno == 0) {
+                mp = MediaPlayer.create(this, sonido);
+                mp.start();
+                datojugador.setImageResource(jugadorImage);
+                textoResultado.setText("Turno del Jugador 2");
+            } else {
+                mp = MediaPlayer.create(this, sonido);
+                mp.start();
+                datojugador2.setImageResource(jugador2Image);
+                sol = result.resultado(jugador, jugador2);
+                if (sol == 0) {
+                    textoResultado.setText("EMPATE");
+                } else if (sol == 1) {
+                    textoResultado.setText("JUGADOR 2 GANA");
+                } else if (sol == -1) {
+                    textoResultado.setText("JUGADOR 1 GANA");
+                }
             }
-        }
-        else{
-            textoResultado.setText("¡Tienes eu limpiar tablero!");
+        } else {
+            textoResultado.setText("¡Tienes que limpiar tablero!");
         }
         turno++;
     }
