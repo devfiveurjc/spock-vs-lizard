@@ -39,22 +39,6 @@ public class JUGADORVSJUGADORS extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    private int devolver(int numero){
-        switch (numero) {
-            case 0:
-                return R.drawable.piedra;
-            case 1:
-                return R.drawable.tijera;
-            case 2:
-                return R.drawable.papel;
-            case 3:
-                return R.drawable.lagarto;
-            case 4:
-                return R.drawable.spock;
-            default:
-        }
-        return numero;
-    }
 
     @SuppressLint({"SetTextI18n", "NonConstantResourceId"})
     public void cambiaimagen(View view) throws NoSuchAlgorithmException {
