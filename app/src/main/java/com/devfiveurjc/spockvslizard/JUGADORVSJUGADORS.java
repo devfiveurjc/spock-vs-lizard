@@ -125,6 +125,7 @@ public class JUGADORVSJUGADORS extends AppCompatActivity {
             textoResultado.setText("¡Tienes que limpiar tablero!");
         }
         turno++;
+
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
