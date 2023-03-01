@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import java.security.NoSuchAlgorithmException;
 
-public class JUGADORVSJUGADOR extends AppCompatActivity {
+public class JUGADORVSJUGADORS extends AppCompatActivity {
     ImageView datojugador;
     ImageView datojugador2;
     int jugador;

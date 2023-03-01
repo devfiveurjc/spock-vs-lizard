@@ -48,12 +48,12 @@ public class Menu extends AppCompatActivity {
         String nombreIngresado = nombre_jugador.getText().toString().trim();
 
         if (!nombreIngresado.isEmpty()){
-            Intent intent = new Intent(this, JUGADORVSJUGADOR.class);
+            Intent intent = new Intent(this, JUGADORVSJUGADORS.class);
             intent.putExtra("Jugador", nombreIngresado);
             startActivity(intent);
         }
         else{
-            Intent intent = new Intent(this, JUGADORVSJUGADOR.class);
+            Intent intent = new Intent(this, JUGADORVSJUGADORS.class);
             intent.putExtra("Jugador", "Usuario");
             startActivity(intent);
         }
