@@ -50,7 +50,7 @@ public class Juego {
             case 1:
                 r = 1;// Gana Maquina
                 break;
-            case -1:
+            default:
                 r = -1; // Gana Jugador
                 break;
         }
