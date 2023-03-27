@@ -13,3 +13,10 @@ public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() { assertEquals(5, 2 + 3); }
 }
+    @BeforeClass
+    public static void setUpClass() {
+    }
+
+    @AfterClass
+    public static void tearDownClass() {
+    }

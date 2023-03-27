@@ -15,3 +15,11 @@ public class ExampleUnitTest {
         assertEquals(6, 2 + 4);
     }
 }
+
+    @BeforeClass
+    public static void setUpClass() {
+    }
+
+    @AfterClass
+    public static void tearDownClass() {
+    }
