@@ -19,9 +19,19 @@ public static void setUpClass() {
 public static void tearDownClass() {
         }
 
+
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
+    }
+}
+
+public class UITest1 {
+    @Test
+    public void useAppContext() {
+        // Context of the app under test.
+        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
+        assertEquals("com.devfiveurjc.spockvslizard", appContext.getPackageName());
     }
 }

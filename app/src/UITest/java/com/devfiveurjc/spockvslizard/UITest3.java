@@ -9,6 +9,14 @@ import static org.junit.Assert.*;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
+@BeforeClass
+public static void setUpClass() {
+        }
+
+@AfterClass
+public static void tearDownClass() {
+        }
+
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
@@ -16,10 +24,12 @@ public class ExampleUnitTest {
     }
 }
 
-    @BeforeClass
-    public static void setUpClass() {
+public class UITest3 {
+    @Test
+    public void useAppContext() {
+        // Context of the app under test.
+        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
+        assertEquals("com.devfiveurjc.spockvslizard", appContext.getPackageName());
     }
+}
 
-    @AfterClass
-    public static void tearDownClass() {
-    }
