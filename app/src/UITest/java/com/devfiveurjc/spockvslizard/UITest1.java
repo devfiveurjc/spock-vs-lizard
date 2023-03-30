@@ -35,3 +35,12 @@ public class UITest1 {
         assertEquals("com.devfiveurjc.spockvslizard", appContext.getPackageName());
     }
 }
+
+ /*   @Test
+    public void ArmaLigeraTest() {
+        ArmaPesada arma = new ArmaPesada("Nombre", 1, 1);
+
+        assertEquals(arma.getNombre(), "Nombre");
+        assertEquals(arma.getPoder(), 1);
+        assertEquals(arma.getDefensa(), 1);
+    }*/
