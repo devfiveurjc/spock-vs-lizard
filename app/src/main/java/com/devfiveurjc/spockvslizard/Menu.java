@@ -1,13 +1,14 @@
 package com.devfiveurjc.spockvslizard;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -27,7 +28,10 @@ public class Menu extends AppCompatActivity {
         cargarPrefeencias();
         cambiarFondo();
 
+        TextView opcion1=findViewById(R.id.option1);
+        opcion1.setText("1 vs Maquina");
         this.nombre_jugador = findViewById(R.id.nombreIngresado);
+
     }
 
     public void PlayClick(View view){
