@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     ImageView Datomaquina;
     MediaPlayer mp;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,13 +27,10 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this,valor, Toast.LENGTH_LONG).show();
         TextView texto = findViewById(R.id.Nombre);
         texto.setText(valor);
-        TextView cabecera=findViewById(R.id.cabecera);
-        cabecera.setText("Elige");
-
+        TextView cabecera= findViewById(R.id.cabecera);
+        cabecera.setText("Elije");
         Datojugador = findViewById(R.id.Datojugador);
         Datomaquina = findViewById(R.id.Datomaquina);
-
-
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
