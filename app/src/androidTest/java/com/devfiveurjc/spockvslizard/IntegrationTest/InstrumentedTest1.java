@@ -1,4 +1,4 @@
-package com.devfiveurjc.spockvslizard.androidTest.IntegrationTest;
+package com.devfiveurjc.spockvslizard.IntegrationTest;
 
 import static org.junit.Assert.assertEquals;
 

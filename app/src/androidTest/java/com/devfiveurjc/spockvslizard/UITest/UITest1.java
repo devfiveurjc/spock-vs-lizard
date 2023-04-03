@@ -1,4 +1,4 @@
-package com.androidTest.UITest;
+package com.devfiveurjc.spockvslizard.UITest;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
