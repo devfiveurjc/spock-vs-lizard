@@ -1,30 +1,22 @@
-package com.devfiveurjc.spockvslizard;
+package com.devfiveurjc.spockvslizard.IntegrationTest;
+
+import android.content.Context;
+
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
 /**
- * Example local unit test, which will execute on the development machine (host).
+ * Instrumented test, which will execute on an Android device.
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-
-@BeforeClass
-public static void setUpClass() {
-        }
-
-@AfterClass
-public static void tearDownClass() {
-        }
-
-public class ExampleUnitTest {
-    @Test
-    public void addition_isCorrect() { assertEquals(5, 2 + 3); }
-}
-
-
-public class UITest2 {
+@RunWith(AndroidJUnit4.class)
+public class InstrumentedTest1 {
     @Test
     public void useAppContext() {
         // Context of the app under test.
