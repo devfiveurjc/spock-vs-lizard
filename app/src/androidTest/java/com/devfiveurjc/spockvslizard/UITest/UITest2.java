@@ -7,9 +7,8 @@ import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
-import androidx.test.espresso.ViewAssertion;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
-import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.devfiveurjc.spockvslizard.Menu;
 import com.devfiveurjc.spockvslizard.R;
@@ -18,24 +17,27 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
- */
-
-@RunWith(AndroidJUnit4ClassRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class UITest2 {
     @Rule
     public ActivityScenarioRule<Menu> activityRule=
             new ActivityScenarioRule<>(Menu.class);
     @Test
-    public void textCreated(){
-        String value="1 vs Maquina";
-        onView(withId(R.id.option1)).check(matches(isDisplayed())); //al cargar la activity, comprueba que el elemento exista
-        onView(withId(R.id.option1)).check(matches(withText(value))); //comprueba que si existe, tiene este texto
+    public void menuItemsCorrectlyCreated(){
+        String option1Text="1 VS Maquina";
+        String option2Text="1 VS 1";
+        String tutorialText="Vídeo Tutorial";
 
-        onView(withId(R.id.ajustes)).check(matches(isDisplayed())); //al cargar la activity, comprueba que el elemento exista
-        onView(withId(R.id.ajustes)).check((ViewAssertion)(isClickable()));
+        onView(withId(R.id.option1)).check(matches(isDisplayed())); //al cargar la activity, comprueba que el elemento exista
+        onView(withId(R.id.option1)).check(matches(withText(option1Text))); //comprueba que si existe, tiene el texto correcto
+
+        onView(withId(R.id.option2)).check(matches(isDisplayed())); //al cargar la activity, comprueba que el elemento exista
+        onView(withId(R.id.option2)).check(matches(withText(option2Text))); //comprueba que si existe, tiene el texto correcto
+
+        onView(withId(R.id.tutorialButton)).check(matches(isDisplayed())); //al cargar la activity, comprueba que el elemento exista
+        onView(withId(R.id.tutorialButton)).check(matches(withText(tutorialText))); //comprueba que si existe, tiene el texto correcto
+
+        onView(withId(R.id.ajustes)).check(matches(isDisplayed())); //al cargar la activity, comprueba que el elemento de ajustes exista
+        onView(withId(R.id.ajustes)).check(matches(isClickable())); //comprueba que se pueda hacer click en los ajustes
     }
 }

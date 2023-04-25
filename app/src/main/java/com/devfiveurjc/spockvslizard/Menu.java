@@ -29,7 +29,12 @@ public class Menu extends AppCompatActivity {
         cambiarFondo();
 
         TextView opcion1=findViewById(R.id.option1);
-        opcion1.setText("1 vs Maquina");
+        opcion1.setText("1 VS Maquina");
+        TextView opcion2=findViewById(R.id.option2);
+        opcion2.setText("1 VS 1");
+        TextView tutorial=findViewById(R.id.tutorialButton);
+        tutorial.setText("Vídeo Tutorial");
+
         this.nombre_jugador = findViewById(R.id.nombreIngresado);
 
     }
