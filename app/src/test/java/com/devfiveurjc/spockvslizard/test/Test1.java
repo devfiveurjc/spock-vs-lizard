@@ -9,7 +9,7 @@ import org.junit.Test;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class UnitaryTest1 {
+public class Test1 {
     @Test
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
