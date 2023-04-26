@@ -1,16 +1,16 @@
 package com.devfiveurjc.spockvslizard;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.media.AudioManager;
+import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.SeekBar;
-import android.os.Bundle;
 import android.widget.Switch;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 public class menuSonido extends AppCompatActivity {
 

@@ -1,7 +1,5 @@
 package com.devfiveurjc.spockvslizard;
 
-import android.os.Build;
-
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Random;

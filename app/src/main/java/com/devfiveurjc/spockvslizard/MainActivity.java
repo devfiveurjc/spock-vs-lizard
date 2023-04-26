@@ -25,8 +25,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         String valor = getIntent().getStringExtra("Jugador");
         Toast.makeText(this,valor, Toast.LENGTH_LONG).show();
-        TextView texto = findViewById(R.id.Nombre);
-        texto.setText(valor);
+        TextView texto = findViewById(R.id.nombre);
+        texto.setText("Buena suerte "+valor);
+        TextView cabecera= findViewById(R.id.cabecera);
+        cabecera.setText("Elije");
         Datojugador = findViewById(R.id.Datojugador);
         Datomaquina = findViewById(R.id.Datomaquina);
 
