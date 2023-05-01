@@ -18,6 +18,7 @@ public class Menu extends AppCompatActivity {
     int modo;
     Window window;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
