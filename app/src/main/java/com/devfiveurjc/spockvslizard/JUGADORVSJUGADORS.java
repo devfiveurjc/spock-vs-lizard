@@ -17,10 +17,28 @@ import java.security.NoSuchAlgorithmException;
 public class JUGADORVSJUGADORS extends AppCompatActivity {
     ImageView datojugador;
     ImageView datojugador2;
-    int jugador;
-    int jugador2;
+    public int jugador;
+    public int jugador2;
     int turno;
-    MediaPlayer mp;
+    public MediaPlayer mp;
+
+    public int getTurno() {
+        return turno;
+    }
+
+    public void setTurno(int turno) {
+        this.turno = turno;
+    }
+
+
+
+    public void setJugador2(int jugador2) {
+        this.jugador2 = jugador2;
+    }
+
+    public void setJugador(int jugador) {
+        this.jugador = jugador;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
