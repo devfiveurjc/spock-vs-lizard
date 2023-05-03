@@ -1,7 +1,5 @@
 package com.devfiveurjc.spockvslizard;
 
-import android.os.Build;
-
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Random;
@@ -38,10 +36,10 @@ public class Juego {
         int[][] t
                 = {
                 {0, -1, 1, 1, -1},
-                {1, 0, -1, -1, 1},
+                {1, 0, -1, -1, -1},
                 {-1, 1, 0, 1, -1},
-                {-1, 1, -1, 0, 1},
-                {1, -1, 1, -1, 0},
+                {-1, 1, -1, 0, -1},
+                {1, -1, 1, -1, -1},
         };
 
         this.tablero = t;

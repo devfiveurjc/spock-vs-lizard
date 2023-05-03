@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView Datojugador;
     ImageView Datomaquina;
     MediaPlayer mp;
+    TextView textoResultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +26,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         String valor = getIntent().getStringExtra("Jugador");
         Toast.makeText(this,valor, Toast.LENGTH_LONG).show();
-        TextView texto = findViewById(R.id.Nombre);
-        texto.setText(valor);
+        TextView texto = findViewById(R.id.nombre);
+        texto.setText("Buena suerte "+valor);
+        TextView cabecera= findViewById(R.id.cabecera);
+        cabecera.setText("Elije");
         Datojugador = findViewById(R.id.Datojugador);
         Datomaquina = findViewById(R.id.Datomaquina);
 
@@ -35,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint({"SetTextI18n", "NonConstantResourceId"})
     public void cambiaimagen(View view) throws NoSuchAlgorithmException {
-        TextView textoResultado = findViewById(R.id.Resultado);
+        textoResultado = findViewById(R.id.cabecera);
         Juego j = new Juego();
         Juego result = new Juego();
         int maquina;

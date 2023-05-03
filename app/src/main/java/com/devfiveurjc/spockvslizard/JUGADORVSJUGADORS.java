@@ -1,8 +1,5 @@
 package com.devfiveurjc.spockvslizard;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -12,15 +9,36 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.security.NoSuchAlgorithmException;
 
 public class JUGADORVSJUGADORS extends AppCompatActivity {
     ImageView datojugador;
     ImageView datojugador2;
-    int jugador;
-    int jugador2;
+    public int jugador;
+    public int jugador2;
     int turno;
-    MediaPlayer mp;
+    public MediaPlayer mp;
+
+    public int getTurno() {
+        return turno;
+    }
+
+    public void setTurno(int turno) {
+        this.turno = turno;
+    }
+
+
+
+    public void setJugador2(int jugador2) {
+        this.jugador2 = jugador2;
+    }
+
+    public void setJugador(int jugador) {
+        this.jugador = jugador;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +46,7 @@ public class JUGADORVSJUGADORS extends AppCompatActivity {
         setContentView(R.layout.activity_jugsdorvs_jugador);
         String valor = getIntent().getStringExtra("Jugador");
         Toast.makeText(this,valor, Toast.LENGTH_LONG).show();
-        TextView texto = findViewById(R.id.Nombre);
+        TextView texto = findViewById(R.id.nombre);
         texto.setText(valor);
         datojugador = findViewById(R.id.Datojugador);
         datojugador2 = findViewById(R.id.Datomaquina);

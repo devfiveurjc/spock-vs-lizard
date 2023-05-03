@@ -1,16 +1,18 @@
 package com.devfiveurjc.spockvslizard;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.media.AudioManager;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.SeekBar;
+import android.widget.Switch;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.media.AudioManager;
-import android.view.MenuItem;
-import android.widget.SeekBar;
-import android.os.Bundle;
-import android.widget.Switch;
 
 public class menuSonido extends AppCompatActivity {
 
@@ -106,6 +108,11 @@ public class menuSonido extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void playSecret(View view) {
+        Intent intent = new Intent(this, Secret.class);
+        startActivity(intent);
     }
 
 
