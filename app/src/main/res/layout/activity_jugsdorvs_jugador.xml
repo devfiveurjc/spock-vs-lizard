@@ -7,24 +7,12 @@
     tools:context=".jugsdorvsJugador">
 
 
-    <TextView
-        android:id="@+id/nombre"
-        android:layout_width="84dp"
-        android:layout_height="25dp"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.36"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.461" />
-
     <ImageView
         android:id="@+id/Datojugador"
         android:layout_width="148dp"
         android:layout_height="164dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="116dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pngwing_com" />
@@ -33,53 +21,43 @@
         android:id="@+id/Datomaquina"
         android:layout_width="137dp"
         android:layout_height="161dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="116dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pngwing_com" />
-
-    <TextView
-        android:id="@+id/username"
-        android:layout_width="73dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="364dp"
-        android:text="nombre :"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/piedra"
         android:layout_width="121dp"
         android:layout_height="101dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="396dp"
+        android:layout_marginBottom="228dp"
         android:onClick="cambiaimagen"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/piedra" />
 
     <ImageView
         android:id="@+id/tijera"
         android:layout_width="111dp"
         android:layout_height="106dp"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="396dp"
+        android:layout_marginBottom="224dp"
         android:onClick="cambiaimagen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/tijera" />
 
     <ImageView
         android:id="@+id/papel"
         android:layout_width="112dp"
         android:layout_height="102dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginBottom="228dp"
         android:onClick="cambiaimagen"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/papel" />
 
     <ImageView
@@ -106,20 +84,29 @@
 
     <TextView
         android:id="@+id/Resultado"
-        android:layout_width="347dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="header"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="#00BCD4"
+        android:textColor="#000000"
         android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nombre2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textColor="#000000"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.102" />
+        app:layout_constraintVertical_bias="0.115" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

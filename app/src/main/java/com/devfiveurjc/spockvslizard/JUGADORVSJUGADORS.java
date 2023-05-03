@@ -46,8 +46,13 @@ public class JUGADORVSJUGADORS extends AppCompatActivity {
         setContentView(R.layout.activity_jugsdorvs_jugador);
         String valor = getIntent().getStringExtra("Jugador");
         Toast.makeText(this,valor, Toast.LENGTH_LONG).show();
-        TextView texto = findViewById(R.id.nombre);
-        texto.setText(valor);
+
+        TextView texto = findViewById(R.id.nombre2);
+        texto.setText("Buena suerte "+valor);
+
+        TextView cabecera= findViewById(R.id.Resultado);
+        cabecera.setText("Elije");
+
         datojugador = findViewById(R.id.Datojugador);
         datojugador2 = findViewById(R.id.Datomaquina);
         turno =0;
