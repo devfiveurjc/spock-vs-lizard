@@ -19,7 +19,7 @@ public class Juego {
 
 
     public int eleccionMaquina(){ //0:Piedra; 1:Papel; 2:Tijera; 3:Lagarto; 4:Spock
-        return this.rand.nextInt(4);
+        return this.rand.nextInt(5);
     }
 
     private void inicializarTablero() {
